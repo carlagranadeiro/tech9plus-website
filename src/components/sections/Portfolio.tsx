@@ -169,7 +169,9 @@ export function Portfolio() {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${
+                    item.image.includes('real-laser-gravacao-1.jpg') ? 'object-contain bg-tech-light p-4' : 'object-cover'
+                  }`}
                 />
                 
                 {/* Overlay */}

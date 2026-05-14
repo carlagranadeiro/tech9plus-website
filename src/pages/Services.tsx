@@ -123,7 +123,9 @@ export function Services() {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-[400px] lg:h-[500px] object-cover"
+                      className={`w-full h-[400px] lg:h-[500px] ${
+                        service.id === 'laser' ? 'object-contain bg-tech-light p-8' : 'object-cover'
+                      }`}
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-tech-dark/40 to-transparent pointer-events-none" />
