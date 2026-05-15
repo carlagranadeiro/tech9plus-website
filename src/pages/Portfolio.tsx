@@ -30,10 +30,10 @@ export function Portfolio() {
     },
     {
       id: 2,
-      title: lang === 'pt' ? '"Good Vibes" Laser' : '"Good Vibes" Laser',
+      title: lang === 'pt' ? 'Gravação acrílico' : '"Good Vibes" Laser',
       category: 'laser_gravacao',
-      image: `${import.meta.env.BASE_URL}real-laser-gravacao-1.jpg`,
-      description: lang === 'pt' ? 'Gravação decorativa em madeira.' : 'Decorative wood engraving.',
+      image: `${import.meta.env.BASE_URL}real-laser-gravacao-1-acrilico_1.webp`,
+      description: lang === 'pt' ? 'Gravação decorativa em acrílico.' : 'Decorative acrylic engraving.',
       client: 'Design',
       year: '2024',
     },
@@ -50,7 +50,7 @@ export function Portfolio() {
       id: 4,
       title: lang === 'pt' ? 'Gravação em Cortiça' : 'Cork Engraving',
       category: 'laser_gravacao',
-      image: `${import.meta.env.BASE_URL}real-laser-gravacao-2.jpg`,
+      image: `${import.meta.env.BASE_URL}real-laser-gravacao-2.webp`,
       description: lang === 'pt' ? 'Laser a gravar em cortiça.' : 'Laser engraving on cork.',
       client: 'Particular',
       year: '2024',
@@ -191,7 +191,7 @@ export function Portfolio() {
                     src={item.image}
                     alt={item.title}
                     className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${
-                      item.image.includes('real-laser-gravacao-1.jpg') ? 'object-contain bg-tech-light p-4' : 'object-cover'
+                      item.image.includes('real-laser-gravacao-1-acrilico_1.webp') ? 'object-contain bg-tech-light p-4' : 'object-cover'
                     }`}
                   />
                   

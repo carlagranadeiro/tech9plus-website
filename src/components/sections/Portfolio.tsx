@@ -16,10 +16,10 @@ const portfolioItems = [
   },
   {
     id: 2,
-    title: 'Painel Decorativo',
+    title: 'Gravação acrílico',
     category: 'laser_gravacao',
-    image: `${import.meta.env.BASE_URL}real-laser-gravacao-1.jpg`,
-    description: 'Corte laser em madeira de carvalho',
+    image: `${import.meta.env.BASE_URL}real-laser-gravacao-1-acrilico_1.webp`,
+    description: 'Gravação decorativa em acrílico',
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const portfolioItems = [
     id: 4,
     title: 'Gravação Personalizada',
     category: 'laser_gravacao',
-    image: `${import.meta.env.BASE_URL}real-laser-gravacao-2.jpg`,
+    image: `${import.meta.env.BASE_URL}real-laser-gravacao-2.webp`,
     description: 'Gravação a laser em madeira personalizada',
   },
   {
@@ -170,7 +170,7 @@ export function Portfolio() {
                   src={item.image}
                   alt={item.title}
                   className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${
-                    item.image.includes('real-laser-gravacao-1.jpg') ? 'object-contain bg-tech-light p-4' : 'object-cover'
+                    item.image.includes('real-laser-gravacao-1-acrilico_1.webp') ? 'object-contain bg-tech-light p-4' : 'object-cover'
                   }`}
                 />
                 
