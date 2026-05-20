@@ -168,7 +168,7 @@ export function Footer() {
               </div>
               <div>
                 <p className="text-sm text-gray-400">{t.footer.address}</p>
-                <p className="text-sm">Centro Comercial Charlot, Loja 9, Loulé</p>
+                <p className="text-sm">Centro Comercial Charlot, Loja 9, 8100-611 Loulé, Portugal.</p>
               </div>
             </div>
             <div className="flex items-center gap-3">

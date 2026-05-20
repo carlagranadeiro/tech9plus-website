@@ -110,7 +110,7 @@ export function Contact() {
     {
       icon: MapPin,
       title: t.contact.addressLabel,
-      content: 'Centro Comercial Charlot\nR. Maj. Manuel Olival B, Loja 9\n8100-542 Loulé',
+      content: 'Centro Comercial Charlot, Loja 9\n8100-611 Loulé, Portugal.',
     },
     {
       icon: Phone,

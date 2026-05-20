@@ -121,9 +121,8 @@ export function CTA() {
                 <div className="mt-6 pt-6 border-t border-white/20">
                   <div className="text-white/60 text-sm mb-2">Localização</div>
                   <div className="text-white">
-                    Centro Comercial Charlot<br />
-                    R. Maj. Manuel Olival B, Loja 9<br />
-                    8100-542 Loulé
+                    Centro Comercial Charlot, Loja 9<br />
+                    8100-611 Loulé, Portugal.
                   </div>
                 </div>
               </div>

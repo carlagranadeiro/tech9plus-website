@@ -106,7 +106,7 @@ const translations: Record<Lang, Translations> = {
       viewAll: 'Ver Todos os Serviços',
     },
     footer: {
-      tagline: 'Especialistas em impressão 3D, CNC e corte e gravação a laser. Transformamos as suas ideias em realidade desde 2020.',
+      tagline: 'Especialistas em impressão 3D, CNC, Corte e Gravação a Laser. Transformamos as suas ideias em realidade desde 2020.',
       services: 'Serviços',
       company: 'Empresa',
       support: 'Suporte',
@@ -177,7 +177,7 @@ const translations: Record<Lang, Translations> = {
       viewAll: 'View All Services',
     },
     footer: {
-      tagline: 'Specialists in 3D printing, CNC and laser cutting and engraving. Turning your ideas into reality since 2020.',
+      tagline: 'Specialists in 3D printing, CNC, Laser Cutting and Engraving. Turning your ideas into reality since 2020.',
       services: 'Services',
       company: 'Company',
       support: 'Support',
