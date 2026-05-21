@@ -10,6 +10,9 @@ export function Hero() {
   const contentRef = useRef<HTMLDivElement>(null);
   const { t } = useLang();
 
+  const laserText = t.hero.laser ?? '';
+  const [laserLine1, laserLine2 = ''] = laserText.split(' a Laser');
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Initial animation
@@ -110,15 +113,19 @@ export function Hero() {
               ))}
             </span>
             <br />
-            <span className="text-tech-blue">
-              {t.hero.cnc?.split('').map((char, i) => (
-                <span key={i} className={`inline-block ${char !== ' ' ? 'text-black' : ''}`}>{char === ' ' ? '\u00A0' : char}</span>
+            <span className="text-tech-blue whitespace-nowrap">
+              <span className="inline-block text-black">
+                {t.hero.cnc?.split('').map((char, i) => (
+                  <span key={`cnc-${i}`} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
+                ))}
+              </span>
+              {laserLine1.split('').map((char, i) => (
+                <span key={`laser1-${i}`} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
               ))}
             </span>
-            <span className="text-tech-blue">
-              {t.hero.laser?.split('').map((char, i) => (
-                <span key={`laser-${i}`} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
-              ))}
+            <br />
+            <span className="block text-tech-blue">
+              {laserLine2 || 'a Laser'}
             </span>
           </h1>
 
