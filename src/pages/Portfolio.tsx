@@ -57,11 +57,11 @@ export function Portfolio() {
     },
     {
       id: 5,
-      title: lang === 'pt' ? 'Processo de Fresagem CNC' : 'CNC Milling Process',
+      title: lang === 'pt' ? 'Processo de Corte CNC' : 'CNC Milling Process',
       category: 'cnc',
       image: `${import.meta.env.BASE_URL}real-cnc-sinalizacao.jpg`,
       video: `${import.meta.env.BASE_URL}video-cnc.mp4`,
-      description: lang === 'pt' ? 'Demonstração do processo de fresagem de alta precisão.' : 'Demonstration of the high-precision milling process.',
+      description: lang === 'pt' ? 'Demonstração do processo de maquinação de alta precisão.' : 'Demonstration of the high-precision milling process.',
       client: 'Tecnologia / Tech',
       year: '2024',
     },

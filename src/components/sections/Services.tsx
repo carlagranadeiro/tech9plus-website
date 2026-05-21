@@ -17,11 +17,11 @@ export function Services() {
     {
       id: 'cnc',
       title: 'CNC',
-      subtitle: lang === 'pt' ? 'Fresagem e Usinagem' : 'Milling and Machining',
-      description: lang === 'pt' ? 'Usinagem precisa para madeira, MDF, acrílico e alumínio.' : 'Precise machining for wood, MDF, acrylic and aluminum.',
+      subtitle: lang === 'pt' ? 'Corte e Maquinação' : 'Milling and Machining',
+      description: lang === 'pt' ? 'Corte e maquinação de precisão para madeira, MDF, acrílico e alumínio.' : 'Precise machining for wood, MDF, acrylic and aluminum.',
       image: `${import.meta.env.BASE_URL}real-cnc-sinalizacao.jpg`,
       icon: Settings,
-      features: lang === 'pt' ? ['Fresagem 3D', 'Corte preciso', 'Gravação CNC'] : ['3D Milling', 'Precise cutting', 'CNC Engraving'],
+      features: lang === 'pt' ? ['Corte 3D', 'Corte preciso', 'Gravação CNC'] : ['3D Milling', 'Precise cutting', 'CNC Engraving'],
     },
     {
       id: 'laser-cut',
