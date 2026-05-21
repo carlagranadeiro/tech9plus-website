@@ -32,6 +32,7 @@ export function Services() {
       subtitle: lang === 'pt' ? 'Gravação acrílico' : 'Clean and Precise Cuts',
       description: lang === 'pt' ? 'Corte a laser em diversos materiais com precisão milimétrica.' : 'Laser cutting in various materials with millimetric precision.',
       image: `${import.meta.env.BASE_URL}real-laser-gravacao-1-acrilico_1.webp`,
+      video: `${import.meta.env.BASE_URL}gravação_laser_acrilico_1.mp4`,
       features: lang === 'pt' ? ['Corte em madeira', 'Acrílico', 'Tecidos'] : ['Wood cutting', 'Acrylic', 'Fabrics'],
       applications: lang === 'pt' ? ['Painéis decorativos', 'Brindes', 'Letras'] : ['Decorative panels', 'Gifts', 'Letters'],
     },
@@ -51,7 +52,7 @@ export function Services() {
       title: lang === 'pt' ? 'Impressão 3D' : '3D Printing',
       subtitle: lang === 'pt' ? 'Prototipagem e Produção' : 'Prototyping and Production',
       description: lang === 'pt' ? 'Transforme as suas ideias em realidade com a nossa impressão 3D.' : 'Turn your ideas into reality with our 3D printing.',
-      image: `${import.meta.env.BASE_URL}real-3d-maquete.jpg`,
+      image: `${import.meta.env.BASE_URL}impressao3d_01.webp`,
       features: lang === 'pt' ? ['FDM e SLA', 'Vários materiais'] : ['FDM and SLA', 'Various materials'],
       applications: lang === 'pt' ? ['Maquetes', 'Protótipos', 'Peças'] : ['Models', 'Prototypes', 'Parts'],
     },
@@ -123,9 +124,7 @@ export function Services() {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className={`w-full h-[400px] lg:h-[500px] ${
-                        service.id === 'laser' ? 'object-contain bg-tech-light p-8' : 'object-cover'
-                      }`}
+                      className="w-full h-[400px] lg:h-[500px] object-cover"
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-tech-dark/40 to-transparent pointer-events-none" />

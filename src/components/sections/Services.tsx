@@ -29,6 +29,7 @@ export function Services() {
       subtitle: lang === 'pt' ? 'Gravação acrílico' : 'Millimetric Precision',
       description: lang === 'pt' ? 'Cortes limpos e detalhados em diversos materiais.' : 'Clean and detailed cuts in various materials.',
       image: `${import.meta.env.BASE_URL}real-laser-gravacao-1-acrilico_1.webp`,
+      video: `${import.meta.env.BASE_URL}gravação_laser_acrilico_1.mp4`,
       icon: Scissors,
       features: lang === 'pt' ? ['Corte limpo', 'Alta velocidade', 'Vários materiais'] : ['Clean cut', 'High speed', 'Various materials'],
     },
@@ -46,7 +47,7 @@ export function Services() {
       title: lang === 'pt' ? 'Impressão 3D' : '3D Printing',
       subtitle: lang === 'pt' ? 'Prototipagem Rápida' : 'Rapid Prototyping',
       description: lang === 'pt' ? 'Transforme as suas ideias em objetos reais.' : 'Turn your ideas into real objects.',
-      image: `${import.meta.env.BASE_URL}real-3d-maquete.jpg`,
+      image: `${import.meta.env.BASE_URL}impressao3d_01.webp`,
       icon: Box,
       features: lang === 'pt' ? ['Vários materiais', 'Prototipagem', 'Peças complexas'] : ['Various materials', 'Prototyping', 'Complex parts'],
     },
@@ -122,13 +123,22 @@ export function Services() {
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${
-                    service.id === 'laser-cut' ? 'object-contain bg-tech-light p-4' : 'object-cover'
-                  }`}
-                />
+                {service.video ? (
+                  <video
+                    src={service.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                ) : (
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-tech-dark/80 to-transparent" />
                 
                 {/* Icon */}
