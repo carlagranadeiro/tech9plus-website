@@ -61,7 +61,7 @@ export function Portfolio() {
       category: 'cnc',
       image: `${import.meta.env.BASE_URL}real-cnc-sinalizacao.jpg`,
       video: `${import.meta.env.BASE_URL}video-cnc.mp4`,
-      description: lang === 'pt' ? 'Demonstração do processo de maquinação de alta precisão.' : 'Demonstration of the high-precision milling process.',
+      description: lang === 'pt' ? 'Demonstração do processo de corte de alta precisão.' : 'Demonstration of the high-precision cutting process.',
       client: 'Tecnologia / Tech',
       year: '2024',
     },

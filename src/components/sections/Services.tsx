@@ -17,39 +17,39 @@ export function Services() {
     {
       id: 'cnc',
       title: 'CNC',
-      subtitle: lang === 'pt' ? 'Corte e Maquinação' : 'Milling and Machining',
-      description: lang === 'pt' ? 'Corte e maquinação de precisão para madeira, MDF, acrílico e alumínio.' : 'Precise machining for wood, MDF, acrylic and aluminum.',
+      subtitle: lang === 'pt' ? 'Corte CNC' : 'CNC Cutting',
+      description: lang === 'pt' ? 'Corte de precisão para madeira, MDF, acrílico e alumínio.' : 'Precise cutting for wood, MDF, acrylic and aluminum.',
       image: `${import.meta.env.BASE_URL}real-cnc-sinalizacao.jpg`,
       icon: Settings,
-      features: lang === 'pt' ? ['Corte 3D', 'Corte preciso', 'Gravação CNC'] : ['3D Milling', 'Precise cutting', 'CNC Engraving'],
+      features: lang === 'pt' ? ['Corte 3D', 'Gravação CNC'] : ['3D Cutting', 'CNC Engraving'],
     },
     {
       id: 'laser-cut',
       title: lang === 'pt' ? 'Corte a Laser' : 'Laser Cutting',
-      subtitle: lang === 'pt' ? 'Gravação acrílico' : 'Millimetric Precision',
+      subtitle: lang === 'pt' ? 'Corte Limpo e Preciso' : 'Millimetric Precision',
       description: lang === 'pt' ? 'Cortes limpos e detalhados em diversos materiais.' : 'Clean and detailed cuts in various materials.',
       image: `${import.meta.env.BASE_URL}real-laser-gravacao-1-acrilico_1.webp`,
       video: `${import.meta.env.BASE_URL}gravação_laser_acrilico_1.mp4`,
       icon: Scissors,
-      features: lang === 'pt' ? ['Corte limpo', 'Alta velocidade', 'Vários materiais'] : ['Clean cut', 'High speed', 'Various materials'],
+      features: lang === 'pt' ? ['Corte limpo', 'Vários materiais'] : ['Clean cut', 'Various materials'],
     },
     {
       id: 'laser-engrave',
       title: lang === 'pt' ? 'Gravação a Laser' : 'Laser Engraving',
-      subtitle: lang === 'pt' ? 'Personalização' : 'Customization',
+      subtitle: lang === 'pt' ? 'Gravação Duradoura' : 'Customization',
       description: lang === 'pt' ? 'Gravação duradoura e de alta qualidade.' : 'Long-lasting, high-quality engraving.',
       image: `${import.meta.env.BASE_URL}real-laser-gravacao-2.webp`,
       icon: PenTool,
-      features: lang === 'pt' ? ['Alta precisão', 'Durabilidade', 'Versatilidade'] : ['High precision', 'Durability', 'Versatility'],
+      features: lang === 'pt' ? ['Alta precisão', 'Durabilidade'] : ['High precision', 'Durability'],
     },
     {
       id: '3d-print',
       title: lang === 'pt' ? 'Impressão 3D' : '3D Printing',
-      subtitle: lang === 'pt' ? 'Prototipagem Rápida' : 'Rapid Prototyping',
+      subtitle: lang === 'pt' ? 'Protótipos' : 'Prototypes',
       description: lang === 'pt' ? 'Transforme as suas ideias em objetos reais.' : 'Turn your ideas into real objects.',
       image: `${import.meta.env.BASE_URL}impressao3d_01.webp`,
       icon: Box,
-      features: lang === 'pt' ? ['Vários materiais', 'Prototipagem', 'Peças complexas'] : ['Various materials', 'Prototyping', 'Complex parts'],
+      features: lang === 'pt' ? ['Vários materiais', 'Prototipagem'] : ['Various materials', 'Prototyping'],
     },
   ];
 
@@ -148,9 +148,6 @@ export function Services() {
 
                 {/* Title overlay */}
                 <div className="absolute bottom-4 left-6 right-6">
-                  <span className="text-white/70 text-sm font-medium">
-                    {service.subtitle}
-                  </span>
                   <h3 className="font-montserrat font-bold text-2xl text-white">
                     {service.title}
                   </h3>

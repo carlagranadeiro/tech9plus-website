@@ -111,8 +111,13 @@ export function Hero() {
             </span>
             <br />
             <span className="text-tech-blue">
-              {t.hero.cncAndLaser.split('').map((char, i) => (
-                <span key={i} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
+              {t.hero.cnc?.split('').map((char, i) => (
+                <span key={i} className={`inline-block ${char !== ' ' ? 'text-black' : ''}`}>{char === ' ' ? '\u00A0' : char}</span>
+              ))}
+            </span>
+            <span className="text-tech-blue">
+              {t.hero.laser?.split('').map((char, i) => (
+                <span key={`laser-${i}`} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
               ))}
             </span>
           </h1>

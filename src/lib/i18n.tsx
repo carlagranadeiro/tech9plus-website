@@ -17,7 +17,8 @@ interface Translations {
     since: string;
     solutions: string;
     print3d: string;
-    cncAndLaser: string;
+    cnc: string;
+    laser: string;
     description: string;
     quoteBtn: string;
     portfolioBtn: string;
@@ -90,7 +91,8 @@ const translations: Record<Lang, Translations> = {
       since: 'Desde 2020 em Loulé',
       solutions: 'Soluções de',
       print3d: 'Impressão 3D',
-      cncAndLaser: 'CNC, Corte e Gravação a Laser',
+      cnc: 'CNC, ',
+      laser: 'Corte e Gravação a Laser',
       description: 'Transformamos as suas ideias em realidade com tecnologia de ponta. Precisão, qualidade e inovação em cada projeto.',
       quoteBtn: 'Solicitar Orçamento',
       portfolioBtn: 'Ver Portefólio',
@@ -100,7 +102,7 @@ const translations: Record<Lang, Translations> = {
     },
     homeServices: {
       title: 'Soluções Completas em',
-      subtitle: 'Fabricação Digital',
+      subtitle: 'fabrico digital.',
       desc: 'Oferecemos serviços profissionais de impressão 3D, CNC e corte e gravação a laser para transformar as suas ideias em realidade.',
       learnMore: 'Saber mais',
       viewAll: 'Ver Todos os Serviços',
@@ -161,7 +163,8 @@ const translations: Record<Lang, Translations> = {
       since: 'Since 2020 in Loulé',
       solutions: 'Solutions for',
       print3d: '3D Printing',
-      cncAndLaser: 'CNC, Laser Cutting and Engraving',
+      cnc: 'CNC, ',
+      laser: 'Laser Cutting and Engraving',
       description: 'We transform your ideas into reality with cutting-edge technology. Precision, quality and innovation in every project.',
       quoteBtn: 'Get a Quote',
       portfolioBtn: 'View Portfolio',
