@@ -110,9 +110,11 @@ export function Hero() {
               ))}
             </span>
             <br />
-            {t.hero.cncAndLaser.split('').map((char, i) => (
-              <span key={i} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
-            ))}
+            <span className="text-tech-blue">
+              {t.hero.cncAndLaser.split('').map((char, i) => (
+                <span key={i} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
+              ))}
+            </span>
           </h1>
 
           {/* Subtitle */}
