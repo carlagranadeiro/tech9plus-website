@@ -113,32 +113,35 @@ export function Services() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={service.id}
-              ref={(el) => {
-                if (el) cardsRef.current[index] = el;
-              }}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-tech-lg transition-all duration-500 border border-tech-blue/5"
-            >
-              {/* Image */}
-              <div className="relative h-64 overflow-hidden">
-                {service.video ? (
-                  <video
-                    src={service.video}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                ) : (
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                )}
+          {services.map((service, index) => {
+            const isLaserCard = service.id === 'laser-cut';
+            return (
+              <div
+                key={service.id}
+                ref={(el) => {
+                  if (el) cardsRef.current[index] = el;
+                }}
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-tech-lg transition-all duration-500 border border-tech-blue/5"
+              >
+                {/* Image */}
+                <div className={`${isLaserCard ? 'relative h-72 md:h-80' : 'relative h-56 md:h-64'} overflow-hidden bg-gray-100`}>
+                  {service.video ? (
+                    <video
+                      src={service.video}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className={`w-full h-full ${isLaserCard ? 'object-cover' : 'object-contain'} transition-transform duration-700 group-hover:scale-105`}
+                    />
+                  ) : (
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className={`w-full h-full ${isLaserCard ? 'object-cover' : 'object-contain'} transition-transform duration-700 group-hover:scale-105`}
+                    />
+                  )}
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-tech-dark/80 to-transparent" />
                 
                 {/* Icon */}
@@ -152,35 +155,35 @@ export function Services() {
                     {service.title}
                   </h3>
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-6">
-                <p className="text-tech-gray mb-6 leading-relaxed">{service.description}</p>
-                
-                {/* Features */}
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {service.features.map((feature) => (
-                    <span
-                      key={feature}
-                      className="px-3 py-1 bg-tech-blue/5 text-tech-blue text-xs font-medium rounded-full border border-tech-blue/10"
-                    >
-                      {feature}
-                    </span>
-                  ))}
+                {/* Content */}
+                <div className="p-6">
+                  <p className="text-tech-gray mb-6 leading-relaxed">{service.description}</p>
+                  
+                  {/* Features */}
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {service.features.map((feature) => (
+                      <span
+                        key={feature}
+                        className="px-3 py-1 bg-tech-blue/5 text-tech-blue text-xs font-medium rounded-full border border-tech-blue/10"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Link */}
+                  <Link
+                    to={`/servicos#${service.id}`}
+                    className="inline-flex items-center gap-2 text-tech-blue font-bold group/link hover:text-tech-blue-light transition-colors"
+                  >
+                    {t.homeServices.learnMore}
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                  </Link>
                 </div>
-
-                {/* Link */}
-                <Link
-                  to={`/servicos#${service.id}`}
-                  className="inline-flex items-center gap-2 text-tech-blue font-bold group/link hover:text-tech-blue-light transition-colors"
-                >
-                  {t.homeServices.learnMore}
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                </Link>
               </div>
-            </div>
-          ))}
+          );
+        })}
         </div>
 
         {/* CTA */}

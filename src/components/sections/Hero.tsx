@@ -8,10 +8,15 @@ export function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
-  const laserText = t.hero.laser ?? '';
-  const [laserLine1, laserLine2 = ''] = laserText.split(' a Laser');
+  const heroLines = [
+    t.hero.solutions,
+    `${t.hero.print3d},`,
+    lang === 'pt' ? 'Corte/Gravação' : t.hero.cnc,
+    lang === 'pt' ? 'a Laser' : t.hero.laser,
+    lang === 'pt' ? 'e CNC' : '',
+  ];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -102,31 +107,34 @@ export function Hero() {
           </div>
 
           {/* Title */}
-          <h1 className="hero-title font-montserrat font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-tech-dark leading-tight mb-6">
-            {t.hero.solutions.split('').map((char, i) => (
-              <span key={i} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
-            ))}
-            <br />
-            <span className="text-tech-blue">
-              {t.hero.print3d.split('').map((char, i) => (
-                <span key={i} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
+          <h1 className="hero-title font-montserrat font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-tech-dark leading-tight mb-6">
+            <span className="block text-black">
+              {heroLines[0].split('').map((char, i) => (
+                <span key={`line1-${i}`} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
               ))}
             </span>
-            <br />
-            <span className="text-tech-blue whitespace-nowrap">
-              <span className="inline-block text-black">
-                {t.hero.cnc?.split('').map((char, i) => (
-                  <span key={`cnc-${i}`} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
+            <span className="block text-tech-blue">
+              {heroLines[1].split('').map((char, i) => (
+                <span key={`line2-${i}`} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
+              ))}
+            </span>
+            <span className="block text-black">
+              {heroLines[2].split('').map((char, i) => (
+                <span key={`line3-${i}`} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
+              ))}
+            </span>
+            <span className="block text-black">
+              {heroLines[3].split('').map((char, i) => (
+                <span key={`line4-${i}`} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
+              ))}
+            </span>
+            {heroLines[4] && (
+              <span className="block text-tech-blue">
+                {heroLines[4].split('').map((char, i) => (
+                  <span key={`line5-${i}`} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
                 ))}
               </span>
-              {laserLine1.split('').map((char, i) => (
-                <span key={`laser1-${i}`} className="inline-block">{char === ' ' ? '\u00A0' : char}</span>
-              ))}
-            </span>
-            <br />
-            <span className="block text-tech-blue">
-              {laserLine2 || 'a Laser'}
-            </span>
+            )}
           </h1>
 
           {/* Subtitle */}

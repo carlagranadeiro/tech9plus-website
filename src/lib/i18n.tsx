@@ -123,7 +123,7 @@ const translations: Record<Lang, Translations> = {
       subtitle: 'Entre em Contacto',
       title: 'Entre em Contacto',
       info: 'Informações de Contacto',
-      infoSub: 'Estamos disponíveis para responder às suas perguntas e discutir as suas necessidades. Não hesite em contactar-nos.',
+      infoSub: 'Estamos disponíveis para responder às suas perguntas e encontrar a melhor solução para as suas necessidades.',
       addressLabel: 'Morada',
       phoneLabel: 'Telefone',
       emailLabel: 'Email',
