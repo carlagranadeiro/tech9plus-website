@@ -102,13 +102,13 @@ const translations: Record<Lang, Translations> = {
     },
     homeServices: {
       title: 'Soluções Completas em',
-      subtitle: 'fabrico digital.',
+      subtitle: 'fabrico digital',
       desc: 'Oferecemos serviços profissionais de impressão 3D, CNC e corte e gravação a laser para transformar as suas ideias em realidade.',
       learnMore: 'Saber mais',
       viewAll: 'Ver Todos os Serviços',
     },
     footer: {
-      tagline: 'Especialistas em impressão 3D, CNC, Corte e Gravação a Laser. Transformamos as suas ideias em realidade desde 2020.',
+      tagline: 'Especialistas em Impressão 3D, Corte /Gravação a Laser e CNC.\nTransformamos as suas ideias em realidade desde 2020.',
       services: 'Serviços',
       company: 'Empresa',
       support: 'Suporte',
@@ -180,7 +180,7 @@ const translations: Record<Lang, Translations> = {
       viewAll: 'View All Services',
     },
     footer: {
-      tagline: 'Specialists in 3D printing, CNC, Laser Cutting and Engraving. Turning your ideas into reality since 2020.',
+      tagline: 'Specialists in 3D Printing, Laser Cutting/Engraving and CNC.\nTurning your ideas into reality since 2020.',
       services: 'Services',
       company: 'Company',
       support: 'Support',
