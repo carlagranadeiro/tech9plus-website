@@ -115,7 +115,7 @@ const translations: Record<Lang, Translations> = {
       address: 'Morada',
       phone: 'Telefone',
       email: 'Email',
-      rights: 'Todos os direitos reservados.',
+      rights: 'Todos os direitos reservados',
       followUs: 'Siga-nos',
     },
     contact: {

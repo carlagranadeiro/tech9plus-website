@@ -150,7 +150,7 @@ export function Footer() {
               </div>
               <div>
                 <p className="text-sm text-gray-400">{t.footer.address}</p>
-                <p className="text-sm">Centro Comercial Charlot, Loja 9, 8100-611 Loulé, Portugal.</p>
+                <p className="text-sm">Centro Comercial Charlot, Loja 9, 8100-611 Loulé, Portugal</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -177,7 +177,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-white/10 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Tech 9+. {t.footer.rights}
+            © {new Date().getFullYear()} Tech 9+ {t.footer.rights}
           </p>
         </div>
       </div>
