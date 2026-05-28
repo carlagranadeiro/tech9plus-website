@@ -108,7 +108,7 @@ const translations: Record<Lang, Translations> = {
       viewAll: 'Ver Todos os Serviços',
     },
     footer: {
-      tagline: 'Especialistas em Impressão 3D, Corte /Gravação a Laser e CNC.\nTransformamos as suas ideias em realidade desde 2020.',
+      tagline: 'Especialistas em Impressão 3D, Corte/Gravação a Laser e CNC\nTransformamos as suas ideias em realidade desde 2020',
       services: 'Serviços',
       company: 'Empresa',
       support: 'Suporte',
